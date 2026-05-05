@@ -1,8 +1,8 @@
 # SEO Content Pipeline
 
-A 10-stage SEO content pipeline built on Claude Code skills. One agent owns the full lifecycle — research through live deploy — with human approval gates between every stage.
+A 10-stage SEO content pipeline built on Claude Code skills. One agent owns the full lifecycle, research through live deploy. Has human approval gates between every stage to ensure quality.
 
-**Used to publish 4 blog posts on makometrics.com. All 4 indexed and ranking — 6,900+ impressions in the last 30 days across competitive paid media queries.**
+**Used to publish 4 high perfomring blog posts on makometrics.com. All 4 indexed and ranking — 6,900+ impressions in the last 30 days across competitive paid media queries.**
 
 | Post | Impressions (30d) | Avg Position |
 |---|---|---|
@@ -55,13 +55,13 @@ Seed topic
 
 ## Design decisions
 
-**Single agent, not multi-agent.** One agent owns research through publish. Keyword decisions made in Stage 1 are still in context during Stage 7 editorial — no handoff errors, no re-reading artifacts to reconstruct intent.
+**Single agent, not multi-agent.** One agent owns research through publish. Keyword decisions made in Stage 1 are still in context during Stage 7 editorial, no handoff errors. The skills are modularized with artifacts after each step so the agent only pulls what's needed into context.
 
-**Stage files for context control, not handoffs.** The orchestrator (`skills/seo-pipeline.md`) handles startup, resume logic, and human gates. It loads only the active stage's runbook on demand. This keeps one agent in control while keeping the context window focused.
+**Stage files for context control, not handoffs.** The orchestrator (`skills/seo-pipeline.md`) handles startup, resume logic, and human gates. It loads only the active stage's runbook on demand. This keeps one agent in control while keeping the context window focused and not bloated.
 
 **Artifact chaining enables resume-anywhere.** The agent detects the current stage by checking which artifacts exist (in reverse order). Drop in mid-pipeline, restart after a break, or jump to a specific stage by name.
 
-**Human gate at every transition.** Each stage ends with a summary and explicit approval request before advancing. A bad brief doesn't silently become a bad 2,000-word draft.
+**Human gate at every transition.** Each stage ends with a summary and explicit approval request before advancing. A bad brief doesn't silently become a bad 2,000-word draft. This ensures quality for each post.
 
 **Config-driven paths and thresholds.** All site details, deploy targets, content defaults, and tool paths live in `config/seo-stack-config.yaml`. The skill files contain no hardcoded domain or deploy logic.
 
