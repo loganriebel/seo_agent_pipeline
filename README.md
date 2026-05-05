@@ -2,7 +2,7 @@
 
 A 10-stage SEO content pipeline built on Claude Code skills. One agent owns the full lifecycle, research through live deploy. Has human approval gates between every stage to ensure quality.
 
-**Used to publish 4 high perfomring blog posts on makometrics.com. All 4 indexed and ranking — 6,900+ impressions in the last 30 days across competitive paid media queries.**
+**Used to publish 4 high perfomring blog posts on makometrics.com. All 4 indexed and ranking well with 6,900+ impressions in the last 30 days across competitive paid media queries.**
 
 | Post | Impressions (30d) | Avg Position |
 |---|---|---|
