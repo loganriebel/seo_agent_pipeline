@@ -1,0 +1,37 @@
+# Runtime pipeline artifacts — created by the pipeline, not part of the template
+research/
+briefs/
+outlines/
+drafts/
+qa-reports/
+blog/
+images/
+deploy/
+assets/
+
+# Site config with real values (keep only the .example)
+config/seo-stack-config.yaml
+
+# GSC and other credentials
+*.json
+!package.json
+gsc-*.json
+*-credentials.json
+*service-account*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.cursor/
+.vscode/
+*.swp

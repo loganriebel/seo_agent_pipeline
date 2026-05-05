@@ -1,0 +1,79 @@
+# SEO Content Stack Configuration
+# Site-specific settings. This is the only file that changes when adapting the pipeline to a different site.
+# Copy this file to seo-stack-config.yaml and fill in every value marked ←
+
+site:
+  name: "YOUR_SITE_NAME"             # ← e.g. "Acme Corp"
+  domain: "your-domain.com"          # ← e.g. "acme.com" (no https://, no trailing slash)
+  blog_base_url: "/blog/"
+  free_tool_url: "/your-cta-page"    # ← your primary CTA page (e.g. "/free-trial", "/pricing")
+
+site_html:
+  # Paste your site header HTML here (navigation bar, logo, etc.)
+  # Gets injected at the top of every generated blog page. Leave blank to omit.
+  header: ""
+  footer: ""
+
+marketing_tags:
+  gtm_id: ""                         # ← Your GTM container ID (e.g. "GTM-XXXXXXX"), or leave blank
+  head_scripts: ""                   # Additional <script>/<link> tags for <head>
+  body_scripts: ""                   # Additional scripts before </body>
+
+author:
+  name: "YOUR_AUTHOR_NAME"           # ← e.g. "Acme Corp" or "Jane Smith"
+  url: "https://your-domain.com"     # ← your site URL
+  logo: "https://your-domain.com/images/logo.png"  # ← absolute URL to your logo
+
+brand_voice:
+  tone: "YOUR_TONE"                  # ← e.g. "direct, data-driven, conversational-professional"
+  audience: "YOUR_AUDIENCE"          # ← e.g. "marketing managers at B2B SaaS companies"
+  topics:
+    - "YOUR_PRIMARY_TOPIC"           # ← e.g. "product marketing"
+    - "YOUR_TOPIC_2"
+    - "YOUR_TOPIC_3"
+
+content_defaults:
+  min_word_count: 2000
+  meta_title_max_chars: 60
+  meta_description_min_chars: 150
+  meta_description_max_chars: 160
+  min_h2_count: 3
+  max_h2_count: 7
+  target_internal_links: 3
+  categories:
+    - "strategy"
+    - "how-to"
+    - "research"
+    - "comparison"
+
+deploy:
+  provider: "YOUR_PROVIDER"          # ← e.g. "digitalocean", "netlify", "vercel", "other"
+  method: "github"                   # ← "github" (push triggers deploy) or "manual"
+  branch: "master"                   # ← "master" or "main"
+  output_dir: "deploy/"
+
+paths:
+  research: "research/"
+  briefs: "briefs/"
+  outlines: "outlines/"
+  drafts: "drafts/"
+  images: "images/blog/"
+  html_output: "blog/"
+  deploy_output: "deploy/blog/"
+  qa_reports: "qa-reports/"
+  content_index: "content-index.json"
+
+seo_tools:
+  build_blog_post: "tools/build_blog_post.py"
+  generate_html: "tools/generate_html.py"
+  publish: "tools/publish.py"
+  sync_deploy: "tools/sync_deploy.py"
+  validate_schema: "tools/validate_schema.py"
+  blog_template: "tools/templates/blog_post.jinja2"
+
+# Optional: Google Search Console for Stage 1 keyword sizing and Stage 6 page performance
+data_sources:
+  google_search_console:
+    property: "sc-domain:your-domain.com"  # ← your GSC property
+    credentials: "gsc-credentials.json"    # ← path to service account JSON (gitignored)
+    impersonate: "you@yourdomain.com"       # ← email to impersonate if using domain delegation
