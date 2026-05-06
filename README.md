@@ -1,6 +1,6 @@
 # SEO Content Pipeline
 
-Disclaimer: This repo is a nerfed version of what I use to build SEO ready blog posts on my websites. Think of this repo as a way to understand the basic process and pipeline. This agent becomes significantly more powerful when you add business context, GSC data, competitor data, SEM Rush KW tracking, and detailed listings of your ICP and brand. 
+**Disclaimer: This repo is a nerfed version of what I use to build SEO ready blog posts on my websites. Think of this repo as a way to understand the basic process and pipeline. This agent becomes significantly more powerful when you add business context, GSC data, competitor data, SEM Rush KW tracking, and detailed listings of your ICP and brand. **
 
 A 10-stage SEO content pipeline built on Claude Code skills. One agent owns the full lifecycle, research through live deploy. Has human approval gates between every stage to ensure quality.
 
