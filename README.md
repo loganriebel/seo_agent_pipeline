@@ -1,8 +1,8 @@
 # SEO Content Pipeline
 
-**Disclaimer: This repo is a nerfed version of what I use to build SEO ready blog posts on my websites. Think of this repo as a way to understand the basic process and pipeline. This agent becomes significantly more powerful when you add business context, GSC data, competitor data, SEM Rush KW tracking, and detailed listings of your ICP and brand. **
+**Disclaimer: This repo is a nerfed version of what I use to build SEO ready blog posts on my websites. Think of this repo as a way to understand the basic process and pipeline. This agent becomes significantly more powerful when you add business context, GSC MCP, GA4 MCP, CRM outcomes, competitor data, SEM Rush KW tracking, and detailed descriptions of your ICP and brand.**
 
-A 10-stage SEO content pipeline built on Claude Code skills. One agent owns the full lifecycle, research through live deploy. Has human approval gates between every stage to ensure quality.
+A 10-stage SEO content pipeline built on Claude Code skills. One agent owns the full lifecycle, research through live deploy. The most important part of the agent is that it uses the seo-pipeline.md as a thin orchestrator and then has 10 separate 'stage' skills so that once we move onto each stage, the agent doesn't have to keep everything in context and can just use the previous stage's artifact to continue the build. There is also a human-in-the-loop approval between every stage to ensure quality at each stage. If you just blindly run each stage, you'll get crap in and crap out.
 
 **Used to publish 30+ blog posts, but here are 4 that performed partically well. All 4 are ranking on the first page of the SERP with 6,900+ impressions in the last 30 days across competitive paid media queries.**
 
