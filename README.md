@@ -123,3 +123,7 @@ Runtime artifact directories (`research/`, `briefs/`, `outlines/`, `drafts/`, `q
 - Claude Code with agent mode enabled
 - Python 3.10+ (for Stage 8 build tools and schema validation)
 - A static site with git-push deploy (or adapt Stage 8/10 for your stack)
+
+## Build Your Own!
+
+Use this repo to get a step by step walkthrough to setup your own AI SEO agent https://github.com/loganriebel/seo-content-stack
